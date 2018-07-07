@@ -1,0 +1,112 @@
+body{
+  /*
+
+    background: #CE7B6F;
+
+   background:
+           linear-gradient(115deg, transparent 75%,  #D29461 ) 0 0,
+           linear-gradient(245deg, transparent 75%,  #D29461 ) 0 0,
+           linear-gradient(115deg, transparent 75%, #D29461) 7px -15px,
+           linear-gradient(245deg, transparent 75%,  #D29461) 7px -15px,
+           #CE7B6F;
+   background-size: 15px 30px;
+
+
+
+
+   background:
+           linear-gradient(63deg, #CE7B6F 23%, transparent 23%) 7px 0,
+           linear-gradient(63deg, transparent 74%, #CE7B6F 78%),
+           linear-gradient(63deg, transparent 34%, #CE7B6F 38%, #CE7B6F 58%, transparent 62%),
+           #D29461;
+   background-size: 16px 48px;
+
+
+
+  background-color: #D29461;
+  background-size: 58px 58px;
+  background-position: 0px 2px, 4px 35px, 29px 31px, 33px 6px,
+  0px 36px, 4px 2px, 29px 6px, 33px 30px;
+  background-image:
+          linear-gradient(335deg, #CE7B6F 23px, transparent 23px),
+          linear-gradient(155deg, #CE7B6F 23px, transparent 23px),
+          linear-gradient(335deg, #CE7B6F 23px, transparent 23px),
+          linear-gradient(155deg, #CE7B6F 23px, transparent 23px),
+
+          linear-gradient(335deg, #CE7B6F 10px, transparent 10px),
+          linear-gradient(155deg, #CE7B6F 10px, transparent 10px),
+          linear-gradient(335deg, #CE7B6F 10px, transparent 10px),
+          linear-gradient(155deg, #CE7B6F 10px, transparent 10px);
+  background-attachment: fixed;
+  background-repeat: repeat;
+
+  */
+
+  background:white;
+
+}
+
+.App {
+  text-align: center;
+  display: grid;
+  justify-items: center;
+
+  grid-template-columns: 100px auto 100px;
+  grid-template-rows:  repeat(30, auto);
+
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+h1, h2, h3, h4 {
+  font-weight: 400;
+  color: black;
+  margin: 0px;
+  padding: 0px;
+
+}
+
+h1{
+  font-size: 3.6em;
+}
+
+h2{
+  font-weight: 400;
+  font-size: 3em;
+  font-style:normal;
+  text-align: right;
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+h3 {
+  font-weight: 900;
+  font-size: 3.4em;
+  padding: 0px 0 10px 0;
+
+
+}
+
+h4{
+  font-size: 1em;
+}
+
+p{
+  font-weight: 600;
+  line-height: 1.4;
+  font-size: 1.4em;
+}

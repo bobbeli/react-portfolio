@@ -1,0 +1,55 @@
+.PortfolioCard {
+    background-color: white;
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    grid-row-start: calc(last-line / 3);
+    grid-row-end: calc(last-line / 3) +1;
+
+    padding: 60px;
+    text-align: left;
+
+    margin-top: 80px;
+
+    max-width: 750px;
+}
+
+.Portfolio-grid-one-column{
+    display: grid;
+    grid-template-columns: 100% 8px;
+}
+
+.Portfolio-grid-two-columns{
+    display: grid;
+    grid-template-columns: 70% 30% 8px;
+}
+
+.Portfolio-title{
+    white-space: nowrap;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: end-1;
+    grid-column-end: end;
+}
+
+.Portfolio-content{
+    padding-right: 100px;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+.Portfolio-content-first{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+.Portfolio-content-second{
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    @media
+}
