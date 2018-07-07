@@ -16,12 +16,12 @@
 
 .Portfolio-grid-one-column{
     display: grid;
-    grid-template-columns: 100% 8px;
+    grid-template-columns:90% 10%;
 }
 
 .Portfolio-grid-two-columns{
     display: grid;
-    grid-template-columns: 70% 30% 8px;
+    grid-template-columns: 60% 30% 10%;
 }
 
 .Portfolio-title{
@@ -33,23 +33,20 @@
 }
 
 .Portfolio-content{
-    padding-right: 100px;
+    padding-right: 30px;
     grid-row-start: 1;
     grid-row-end: 2;
     grid-column-start: 1;
     grid-column-end: 2;
 }
 
-.Portfolio-content-first{
-    grid-row-start: 1;
-    grid-row-end: 2;
-    grid-column-start: 1;
-    grid-column-end: 2;
-}
-.Portfolio-content-second{
-    grid-row-start: 1;
-    grid-row-end: 2;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    @media
+
+@media only screen and (max-width: 900px) {
+    .PortfolioCard{
+        padding: 30px;
+    }
+
+    .Portfolio-content{
+        padding-right: 10px;
+    }
 }

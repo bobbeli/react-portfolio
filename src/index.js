@@ -18,6 +18,9 @@ WebFont.load({
  */
 
 WebFont.load({
+    google: {
+        families: ['Crimson+Text:400']
+    },
     custom: {
         families: ['geomanistregular'],
         urls: ['fonts.css']

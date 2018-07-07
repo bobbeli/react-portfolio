@@ -8,12 +8,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <PortfolioCard cardType="start" columns="one"/>
-        <PortfolioCard cardType="bio" columns="one" />
-        <PortfolioCard cardType="code" columns="two" />
-        <PortfolioCard cardType="code" columns="two" />
-        <PortfolioCard cardType="code" columns="two" />
-        <PortfolioCard cardType="code" columns="two" />
+        <PortfolioCard cardType="start" />
+        <PortfolioCard cardType="bio" />
+        <PortfolioCard cardType="code" />
       </div>
     );
   }

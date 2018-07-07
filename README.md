@@ -4,7 +4,7 @@ Simple React App (Based on react-create-app) for my Portfolio Page
 
 ## Demo
 
-* [Portfolio](https://suterdimitri.com/) - still in Development 
+* [Portfolio](https://dimitrisuter.ch/) - still in Development 
 
 ## Built With
 
