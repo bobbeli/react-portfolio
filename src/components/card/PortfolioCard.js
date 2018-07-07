@@ -17,6 +17,16 @@ class PortfolioCard extends Component {
             );
         }
 
+        let links = WebContent[this.props.cardType].links;
+        let linksList = '';
+        if(links){
+            linksList = Object.keys(links).map(function (key) {
+                return   <span>
+                            <a href={ links[key].url } target="_blank">{links[key].name}</a>
+                        </span>
+            });
+        }
+
 
         return (
             <section className="PortfolioCard">
@@ -45,6 +55,13 @@ class PortfolioCard extends Component {
 
                                         {
                                             WebContent[this.props.cardType].text
+                                        }
+
+                                        {
+                                            links ?
+                                                <div className="linkslist">{linksList}</div>
+                                                :
+                                                null
                                         }
                                     </div>
                             }

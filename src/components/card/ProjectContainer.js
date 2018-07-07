@@ -12,6 +12,20 @@ class ProjectContainer extends Component {
             );
         }
 
+        let links = this.props.content.links;
+        let linksList = '';
+        if(links){
+            linksList = Object.keys(links).map(function (key) {
+               return   <span>
+                            <a href={ links[key].url } target="_blank">{links[key].name}</a>
+                        </span>
+            });
+        }
+
+
+
+
+
 
         return (
             <div className="ProjectContainer">
@@ -29,6 +43,13 @@ class ProjectContainer extends Component {
                 {
                     tech ?
                         <ul>{techList}</ul>
+                        :
+                        null
+                }
+
+                {
+                    links ?
+                        <div className="linkslist">{linksList}</div>
                         :
                         null
                 }

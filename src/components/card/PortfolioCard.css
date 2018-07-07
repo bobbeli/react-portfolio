@@ -40,6 +40,28 @@
     grid-column-end: 2;
 }
 
+.ProjectContainer{
+    margin-bottom: 80px;
+}
+
+.linkslist span{
+    margin-right: 15px;
+}
+
+.linkslist span a{
+    text-decoration: none;
+    color: #D29461;
+    opacity: .7;
+    -webkit-transition: scolor .7s ease-out;
+    -moz-transition: color .7s ease-out;
+    -o-transition: color .7s ease-out;
+    transition: color .7s ease-out;
+}
+
+.linkslist span a:hover{
+    color: #964039;
+}
+
 
 @media only screen and (max-width: 900px) {
     .PortfolioCard{
@@ -48,5 +70,9 @@
 
     .Portfolio-content{
         padding-right: 10px;
+    }
+
+    .ProjectContainer{
+        margin-bottom: 50px;
     }
 }
