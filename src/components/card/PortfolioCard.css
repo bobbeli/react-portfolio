@@ -32,6 +32,12 @@
     grid-column-end: end;
 }
 
+@media only screen and (max-width: 500px) {
+    .Portfolio-title{
+       margin-left: -10px;
+    }
+}
+
 .Portfolio-content{
     padding-right: 30px;
     grid-row-start: 1;
@@ -65,7 +71,8 @@
 
 @media only screen and (max-width: 900px) {
     .PortfolioCard{
-        padding: 30px;
+        margin-top: 0px;
+        padding: 40px;
     }
 
     .Portfolio-content{
@@ -75,4 +82,12 @@
     .ProjectContainer{
         margin-bottom: 50px;
     }
+}
+
+
+@media only screen and (max-width: 540px) {
+    .PortfolioCard{
+        padding: 40px;
+    }
+
 }

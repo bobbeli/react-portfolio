@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './PortfolioCard.css';
+import { Link } from 'react-router-dom'
 import {WebContent} from '../../data/Data'
 
 class ProjectContainer extends Component {
@@ -17,7 +18,7 @@ class ProjectContainer extends Component {
         if(links){
             linksList = Object.keys(links).map(function (key, index) {
                return   <span key={index.toString()}>
-                            <a href={ links[key].url } target="_blank">{links[key].name}</a>
+                            <Link to={ links[key].url } target="_self">{links[key].name}</Link>
                         </span>
             });
         }
