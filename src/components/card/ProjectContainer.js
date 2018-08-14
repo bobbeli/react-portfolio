@@ -7,52 +7,64 @@ class ProjectContainer extends Component {
         let tech = this.props.content.tech;
         let techList = '';
         if(tech){
-            techList = tech.map((name) =>
-                <li  key={name}>{name}</li>
+            techList = tech.map((name, index) =>
+                <p ><li key={index.toString()}>{name}</li></p>
             );
         }
 
         let links = this.props.content.links;
         let linksList = '';
         if(links){
-            linksList = Object.keys(links).map(function (key) {
-               return   <span>
+            linksList = Object.keys(links).map(function (key, index) {
+               return   <span key={index.toString()}>
                             <a href={ links[key].url } target="_blank">{links[key].name}</a>
                         </span>
             });
         }
 
-
+        let subtitlePrefix = '';
+        if(this.props.content.subtitle === 'Say Hello GmbH'){
+            subtitlePrefix = 'Die ';
+        }
 
 
 
 
         return (
             <div className="ProjectContainer">
-                {
-                    this.props.content.subtitle ?
-                        <b>{this.props.content.subtitle} </b>
-                        :
-                        null
-                }
+                <p>
 
-                {
-                    this.props.content.text
-                }
+                    {
+                        subtitlePrefix
+                    }
 
-                {
-                    tech ?
-                        <ul>{techList}</ul>
-                        :
-                        null
-                }
+                    {
+                        this.props.content.subtitle ?
+                            <b>{this.props.content.subtitle} </b>
+                            :
+                            null
+                    }
 
-                {
-                    links ?
-                        <div className="linkslist">{linksList}</div>
-                        :
-                        null
-                }
+                    {
+                        this.props.content.text
+                    }
+                </p>
+
+                    {
+                        tech ?
+                            <ul>{techList}</ul>
+                            :
+                            null
+                    }
+                    <p>
+
+                    {
+                        links ?
+                            <span className="linkslist">{linksList}</span>
+                            :
+                            null
+                    }
+                </p>
 
             </div>
         );

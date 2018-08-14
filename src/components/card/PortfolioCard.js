@@ -7,21 +7,24 @@ class PortfolioCard extends Component {
     render() {
 
 
-
+        const styles = {
+            marginTop: '16px'
+        }
 
         let projects = WebContent[this.props.cardType].projects;
         let projectList = '';
+
         if(projects){
-            projectList = projects.map((content) =>
-                <ProjectContainer content={content} />
+            projectList = projects.map((content, index) =>
+                <ProjectContainer content={content}  schluessel={index} />
             );
         }
 
         let links = WebContent[this.props.cardType].links;
         let linksList = '';
         if(links){
-            linksList = Object.keys(links).map(function (key) {
-                return   <span>
+            linksList = Object.keys(links).map(function (key, index) {
+                return   <span key={index}>
                             <a href={ links[key].url } target="_blank">{links[key].name}</a>
                         </span>
             });
@@ -36,8 +39,8 @@ class PortfolioCard extends Component {
                         <h2>{WebContent[this.props.cardType].title}</h2>
                     </div>
 
-                    <div className="Portfolio-content">
-                        <p>
+                    <div className="Portfolio-content" key={WebContent[this.props.cardType].subtitle} >
+
 
                             {
                                 WebContent[this.props.cardType].projects ?
@@ -46,6 +49,7 @@ class PortfolioCard extends Component {
                                     </div>
                                     :
                                     <div>
+                                        <p>
                                         {
                                             WebContent[this.props.cardType].subtitle ?
                                                 <b>{WebContent[this.props.cardType].subtitle} </b>
@@ -57,9 +61,10 @@ class PortfolioCard extends Component {
                                             WebContent[this.props.cardType].text
                                         }
 
+                                        </p>
                                         {
                                             links ?
-                                                <div className="linkslist">{linksList}</div>
+                                                <p className="linkslist" style={styles}>{linksList}</p>
                                                 :
                                                 null
                                         }
@@ -70,7 +75,7 @@ class PortfolioCard extends Component {
 
 
 
-                        </p>
+
                     </div>
                 </div>
 
